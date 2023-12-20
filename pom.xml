@@ -8,11 +8,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-<properties>
+	<properties>
+		<docker.image.prefix>kammana</docker.image.prefix>
+		<sonar.host.url>http://52.205.253.91:9000/</sonar.host.url>
 
-   <sonar.host.url>52.205.253.91:9000/<sonar.host.url>
-
-</properties>
+	</properties>
     
     <build>
         <plugins>
@@ -26,5 +26,4 @@
             </plugin>
         </plugins>
     </build>
-</project>
 
