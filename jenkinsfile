@@ -5,7 +5,7 @@ pipeline {
         stage('CLONE SCM') {
             steps {
                 echo 'cloning code from Github'
-				git branch: 'main', url: 'https://github.com/devopstraininghub/webapp1.git'
+				git branch: 'main', url: 'https://github.com/Ramakrishnaa007/webapp1.git'
             }
         }
 		
@@ -21,7 +21,7 @@ pipeline {
 		stage('Deploy') {
             steps {
                 echo 'Deploy to tomcat ap/n server '
-				deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://3.88.103.180:8081/')], contextPath: 'facebook', war: '**/*.war'
+				deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://174.129.171.152:8081/')], contextPath: 'facebook', war: '**/*.war'
             }
         }
     }
